@@ -1,0 +1,147 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('picsxx/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f2f2f2;
+  backdrop-filter: brightness(0.4);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* <== toned down */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  backdrop-filter: blur(2px); /* adds depth without blacking out */
+}
+
+
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  color: #ff4040;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: flicker 3s infinite;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 5px crimson);
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: #ff9d9d;
+  margin-bottom: 1.8rem;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2.5rem;
+}
+
+.event-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.event-info li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
+}
+
+/* Register Button */
+.register {
+  text-align: center;
+}
+
+.register-subtext {
+  font-style: italic;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.register-btn {
+  display: inline-block;
+  background-color: #ff4040;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.register-btn:hover {
+  background-color: #e62e2e;
+  transform: scale(1.06);
+  box-shadow: 0 0 12px #ff4040a0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .register-btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
