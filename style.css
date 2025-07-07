@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('picsxx/bg.jpg');
+  background-image: url('./bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
