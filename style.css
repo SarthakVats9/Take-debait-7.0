@@ -47,6 +47,10 @@ header h1 {
   filter: drop-shadow(0 0 5px crimson);
 }
 
+.logo:hover {
+    transform: scale(1.1);
+ }
+
 .tagline {
   text-align: center;
   font-style: italic;
@@ -104,6 +108,11 @@ footer {
   font-size: 0.9rem;
   color: #888;
   margin-top: 2rem;
+  a{
+  color: white;
+  text-decoration: none;
+  }
+
 }
 
 /* Responsive Design */
