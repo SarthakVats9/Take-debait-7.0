@@ -17,15 +17,25 @@ body {
   line-height: 1.6;
 }
 
-/* Container */
+/* Grid layout added to container */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.5); /* <== toned down */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-  backdrop-filter: blur(2px); /* adds depth without blacking out */
+  backdrop-filter: blur(2px);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+/* Reusable 2-column layout */
+.grid-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 
@@ -106,10 +116,14 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-two-col {
+    grid-template-columns: 1fr;
   }
 
   header h1 {
@@ -122,9 +136,22 @@ footer {
 }
 
 @media (max-width: 480px) {
-  body {
-    background-attachment: scroll;
+  .container {
+    padding: 1rem;
   }
+
+  .grid-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+}
 
   header h1 {
     font-size: 1.7rem;
